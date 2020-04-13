@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../ReactJs/coursebee"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "developer-challenge-portfolio"
+	}
+}
