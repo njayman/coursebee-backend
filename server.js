@@ -27,6 +27,6 @@ app.use('/admin', AdminRoute, (req, res) => {
 
 
 //listening
-app.listen(PORT, () => {
-    console.log(`server is running at ${PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`server is running at ${process.env.PORT}`);
 })
