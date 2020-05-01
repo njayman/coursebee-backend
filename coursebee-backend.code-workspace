@@ -1,10 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "../../ReactJs/coursebee"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "../../nextjs/cb"
+		},
+		{
+			"path": "../../nextjs/khamar-e"
+		},
+		{
+			"path": "../../Strapi/khamar-e"
+		},
+		{
+			"path": "../../html/cb"
 		}
 	],
 	"settings": {
