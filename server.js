@@ -19,9 +19,9 @@ mongoose.connection.once('open', () => {
 
 
 //route management
-const AdminRoute = require('./routes/admin');
-app.use('/admin', AdminRoute, (req, res) => {
-    console.log('This is admin route. Beaware!!!')
+const InstructorRoute = require('./routes/Instructor');
+app.use('/instructor', InstructorRoute, (req, res) => {
+    console.log('This is Instructor route. Beaware!!!')
     res.send("Hello!")
 });
 
