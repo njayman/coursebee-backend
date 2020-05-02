@@ -22,7 +22,7 @@ mongoose.connection.once('open', () => {
 const InstructorRoute = require('./routes/Instructor');
 app.use('/instructor', InstructorRoute, (req, res) => {
     console.log('This is Instructor route. Beaware!!!')
-    res.send("Hello!")
+    res.send("Hello Instructor!")
 });
 
 

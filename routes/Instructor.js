@@ -12,16 +12,25 @@ router.get('/courses', async (req, res) => {
     }
 })
 
+//add a course
 router.post('/addCourse', async (req, res) => {
     try {
         console.log(req.body)
         const course = new Course({
             title: req.body.title,
             description: req.body.description,
-            category: req.body.category
+            //category: req.body.category
         })
         await course.save()
-        res.json(course)
+        res.json("Successfully added " + course.title)
+    } catch (err) {
+        res.json({ message: err })
+    }
+})
+
+router.delete('/deleteCourse/:id', async (req, res) => {
+    try {
+
     } catch (err) {
         res.json({ message: err })
     }

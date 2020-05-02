@@ -12,6 +12,7 @@ const CourseSchema = mongoose.Schema({
     title: { type: String },
     description: { type: String },
     date: { type: Date, default: Date.now },
+    approved: { type: Boolean, default: false },
     videos: { type: [VideoSchema], default: [] }
 })
 
