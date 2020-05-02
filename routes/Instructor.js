@@ -22,17 +22,18 @@ router.post('/addCourse', async (req, res) => {
             //category: req.body.category
         })
         await course.save()
-        res.json("Successfully added " + course.title)
+        res.send("Successfully added " + course.title)
     } catch (err) {
-        res.json({ message: err })
+        res.send({ message: err })
     }
 })
 
 router.delete('/deleteCourse/:id', async (req, res) => {
     try {
-
+        const course = await Course.findByIdAndRemove(req.params.id)
+        res.send("Successfully deleted")
     } catch (err) {
-        res.json({ message: err })
+        res.send({ message: err })
     }
 })
 
