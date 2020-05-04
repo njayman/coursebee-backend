@@ -6,9 +6,19 @@ const Course = require('../model/course');
 router.get('/courses', async (req, res) => {
     try {
         const courses = await Course.find()
-        res.json(courses);
+        res.send(courses);
     } catch (err) {
-        res.json({ message: err })
+        res.send({ message: err })
+    }
+})
+
+//get all courses
+router.get('/course/:id', async (req, res) => {
+    try {
+        const course = await Course.findById(req.params.id)
+        res.send(course);
+    } catch (err) {
+        res.send({ message: err })
     }
 })
 
