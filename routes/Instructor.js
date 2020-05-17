@@ -47,6 +47,26 @@ router.delete('/deleteCourse/:id', async (req, res) => {
     }
 })
 
+router.post('/updateCourseTitle/:id', async (req, res) => {
+    try {
+        const course = await Course.findByIdAndUpdate(req.params.id,
+            { $set: { title: req.body.title } }, { new: true })
+        res.send("Successfully Updated")
+    } catch (err) {
+        res.send({ message: err })
+    }
+})
+
+router.post('/updateCourseDescription/:id', async (req, res) => {
+    try {
+        const course = await Course.findByIdAndUpdate(req.params.id,
+            { $set: { description: req.body.description } }, { new: true })
+        res.send("Successfully Updated")
+    } catch (err) {
+        res.send({ message: err })
+    }
+})
+
 
 
 module.exports = router;
