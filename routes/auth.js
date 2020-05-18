@@ -42,7 +42,6 @@ router.post('/addInstructor', async (req, res) => {
                                     password: req.body.password,
                                     institute: req.body.institute,
                                     position: req.body.position,
-                                    department: req.body.department,
                                     interest: req.body.interest
                                 })
                                 instructor.save()
