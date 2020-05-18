@@ -21,6 +21,7 @@ mongoose.connection.once('open', () => {
 //route management
 const InstructorRoute = require('./routes/Instructor');
 const InstructorAuthRoute = require('./routes/auth');
+const AdminRoute = require('./routes/admin');
 app.use('/instructor', InstructorRoute, (req, res) => {
     console.log('This is Instructor route. Beaware!!!')
     res.send("Hello Instructor!")
@@ -31,6 +32,10 @@ app.use('/auth', InstructorAuthRoute, (req, res) => {
     res.send("...")
 });
 
+app.use('/admin', AdminRoute, (req, res) => {
+    console.log('!!!')
+    res.send("...")
+});
 
 //listening
 app.listen(process.env.PORT, () => {
