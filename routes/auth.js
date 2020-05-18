@@ -39,9 +39,11 @@ router.post('/addInstructor', async (req, res) => {
                                     fullname: req.body.fullname,
                                     email: req.body.email,
                                     phone: req.body.phone,
+                                    password: req.body.password,
                                     institute: req.body.institute,
                                     position: req.body.position,
-                                    department: req.body.department
+                                    department: req.body.department,
+                                    interest: req.body.interest
                                 })
                                 instructor.save()
                                 res.json("Success")

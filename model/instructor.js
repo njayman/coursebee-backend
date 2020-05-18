@@ -7,6 +7,7 @@ const InstructorSchema = mongoose.Schema({
     institute: { type: String },
     position: { type: String },
     department: { type: String },
+    password: { type: String },
     email: { type: String },
     date: { type: Date, default: Date.now },
     interest: [],
