@@ -21,4 +21,14 @@ router.get('/getInstructor/:id', async (req, res) => {
     }
 })
 
+router.post('/updateInstructorStatus/:id', async (req, res) => {
+    try {
+        await Instructor.findByIdAndUpdate(req.params.id,
+            { $set: { approved: true } }, { new: true })
+        res.send("Your account was verified")
+    } catch {
+        res.send("We could not verify your account")
+    }
+})
+
 module.exports = router;
