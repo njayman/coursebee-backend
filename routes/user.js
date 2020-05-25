@@ -46,9 +46,9 @@ router.post('/addUser', async (req, res) => {
                                     interest: req.body.interest
                                 })
                                 user.save()
-                                res.json("Success")
+                                res.json("Successfully registered")
                             } else {
-                                res.send("An account with this email address already exists")
+                                res.send({ message: "You are registered successfully!", success: true })
                             }
                         }
                     })
